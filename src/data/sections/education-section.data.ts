@@ -11,6 +11,15 @@ const educationSectionData = {
   },
   diplomas: [
     {
+      title: 'Gestión de sistemas de información',
+      institution: 'Escuela ISAM',
+      image: import('@/assets/logos/isam.png'),
+      dates: [new Date('2024.01'), null], // Currently studying
+      description:
+        'Distance learning program focused on information systems management and modern technology.',
+      links: [website({ url: 'https://escuelaisam.edu.pe/' })],
+    },
+    {
       title: 'Técnico en computación e informatica',
       institution: 'CIMAS',
       image: import('@/assets/logos/cimas.png'),
