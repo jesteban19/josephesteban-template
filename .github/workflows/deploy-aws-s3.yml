@@ -33,7 +33,7 @@ jobs:
             - name: Sincronizar archivos a S3
               # Cambia './build' por la carpeta generada (ej. './dist') o por '.' si son puros archivos HTML estáticos
               run: |
-                  aws s3 sync ./dist s3://${{ env.AWS_S3_BUCKET }} --delete
+                  aws s3 sync ./dist s3://${{ secrets.AWS_S3_BUCKET }} --delete
 
             # Opcional: Invalida la caché si estás sirviendo la web a través de CloudFront
             # - name: Invalidar caché de CloudFront
