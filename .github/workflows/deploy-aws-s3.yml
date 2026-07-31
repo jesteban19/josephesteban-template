@@ -1,0 +1,41 @@
+name: Deploy to Amazon S3
+
+on:
+    push:
+        branches:
+            - main # Cambia esto si tu rama principal tiene otro nombre
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout del código
+              uses: actions/checkout@v4
+
+            # Descomenta este bloque si tu web requiere un proceso de build (React, Angular, Vue, TypeScript, etc.)
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "22"
+            - name: Instalar dependencias y construir
+              run: |
+                  npm ci
+                  npm run build
+
+            - name: Configurar credenciales de AWS
+              uses: aws-actions/configure-aws-credentials@v4
+              with:
+                  aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                  aws-region: us-east-1 # Reemplaza con tu región de AWS (ej. sa-east-1)
+
+            - name: Sincronizar archivos a S3
+              # Cambia './build' por la carpeta generada (ej. './dist') o por '.' si son puros archivos HTML estáticos
+              run: |
+                  aws s3 sync ./dist s3://${{ secrets.AWS_S3_BUCKET }} --delete
+
+            # Opcional: Invalida la caché si estás sirviendo la web a través de CloudFront
+            # - name: Invalidar caché de CloudFront
+            #   run: |
+            #     aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DIST_ID }} --paths "/*"
