@@ -28,7 +28,7 @@ jobs:
               with:
                   aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
                   aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-                  aws-region: us-east-1 # Reemplaza con tu región de AWS (ej. sa-east-1)
+                  aws-region: us-east-1 # Reemplaza con tu región de AWS (ej. us-east-1)
 
             - name: Sincronizar archivos a S3
               # Cambia './build' por la carpeta generada (ej. './dist') o por '.' si son puros archivos HTML estáticos
