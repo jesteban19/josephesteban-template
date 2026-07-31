@@ -46,9 +46,65 @@ const experienceSectionData = {
   },
   jobs: [
     {
+      role: 'IA Developer',
+      company: 'Banco de Crédito BCP',
+      image: import('@/assets/logos/bcp.jpeg'),
+      dates: [new Date('2025-07'), null],
+      description: `
+        - Desarrollo e implementación de soluciones avanzadas de Inteligencia Artificial utilizando Semantic Kernel, Python, Node.js y TypeScript, directamente integradas en los sistemas bancarios de BCP.
+        - Optimización y escalamiento de arquitecturas de IA en producción, mejorando los tiempos de respuesta y la precisión de los modelos de machine learning para servicios financieros críticos.
+        - Desarrollo de sistemas multiagente especializados para automatización de procesos bancarios, incluyendo análisis de riesgo crediticio en tiempo real y personalización de servicios financieros.
+        - Implementación de soluciones de procesamiento de lenguaje natural (NLP) para análisis automatizado de documentos financieros y detección de patrones en transacciones.
+        - Diseño y desarrollo de APIs de IA robustas utilizando Azure y tecnologías cloud, garantizando alta disponibilidad y seguridad en el ecosistema bancario.
+        - Colaboración directa con equipos de producto y negocio para traducir requerimientos estratégicos en soluciones técnicas de IA escalables y eficientes.
+        - Mentoring y liderazgo técnico en implementación de mejores prácticas de MLOps y desarrollo de IA ética en el sector financiero.
+      `,
+      tagsList: {
+        title: 'Technologies',
+        tags: [
+          python(),
+          nodejs(),
+          typescript(),
+          azure(),
+          react(),
+          automation(),
+          ethical(),
+        ],
+      },
+      links: [website({ url: 'https://www.viabcp.com/' })],
+    },
+    {
+      role: 'Lead Engineer',
+      company: 'CREDICORP (via NTT DATA Europe & Latam)',
+      image: import('@/assets/logos/ntt.jpeg'),
+      dates: [new Date('2024-09'), new Date('2025-07')],
+      description: `
+        - Lideré el desarrollo e implementación de soluciones de IA para el sector financiero utilizando Node.js, TypeScript, React y Python, alineadas con los objetivos estratégicos del área de Inteligencia Artificial de Credicorp.
+        - Diseñé y optimicé flujos de datos críticos utilizando Azure y Databricks, mejorando significativamente la eficiencia del análisis predictivo y procesamiento de información financiera.
+        - Desarrollé sistemas multiagente innovadores y soluciones con OpenAI para casos de uso financiero especializados, incluyendo evaluación automatizada de riesgos crediticios y atención al cliente personalizada con IA.
+        - Implementé sistemas avanzados de procesamiento de audio para analizar conversaciones telefónicas bancarias y extraer insights clave que mejoraron la toma de decisiones estratégicas.
+        - Lideré la colaboración con equipos multidisciplinarios garantizando el cumplimiento de tiempos y entregables críticos para el área de IA, manteniendo alta calidad en todos los proyectos.
+        - Analizé y documenté requerimientos técnicos y funcionales complejos, asegurando que todas las soluciones fueran escalables, sostenibles y de alto impacto para la organización.
+        - Arquitecté e implementé soluciones robustas en la nube utilizando Azure, priorizando sostenibilidad, seguridad de datos financieros y escalabilidad empresarial.
+      `,
+      tagsList: {
+        title: 'Technologies',
+        tags: [
+          nodejs(),
+          typescript(),
+          react(),
+          python(),
+          azure(),
+          automation(),
+          ethical(),
+        ],
+      },
+      links: [website({ url: 'https://pe.nttdata.com/' })],
+    },
+    {
       role: 'Senior full stack developer',
       company: 'Foodology Inc',
-      image: import('@/assets/logos/default.png'),
+      image: import('@/assets/logos/food.jpeg'),
       dates: [new Date('2022-04'), new Date('2024-07')],
       description: `
         - Desarrollo de requerimientos para Foodology Inc.

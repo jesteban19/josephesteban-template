@@ -11,7 +11,7 @@ const mainSectionData = {
   },
   image: import('@/assets/avatar.jpg'),
   fullName: 'Joseph Esteban',
-  role: 'Senior Full Stack Developer',
+  role: 'Sr. Software Engineer | AI & Cloud Specialist',
   details: [
     { label: 'Phone', value: '+51968728452', url: 'tel:+51968728452' },
     {
@@ -42,8 +42,9 @@ const mainSectionData = {
       fullRow: true,
     },
   ],
-  description:
-    'Senior FullStack Developer con más de 13 años de experiencia en análisis, desarrollo e implementación de soluciones tecnológicas. Apasionado por la innovación y mantenerse al día con las últimas herramientas y lenguajes.',
+  description: `Más de 13 años desarrollando soluciones escalables e inteligentes con un enfoque en IA, backend y cloud. Apasionado por la resolución de problemas complejos y la innovación tecnológica.
+    Siempre explorando nuevas fronteras en IA y arquitectura de software. ¡Construyamos el futuro con inteligencia artificial! 🚀
+    `,
   tags: [
     { name: 'Open for freelance' },
     { name: 'Available for mentoring' },
